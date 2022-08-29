@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- <style>
+        .side-bar{
+            color :red;
+            background-color: rgb(228, 228, 236);
+            height: 90vh;
+        }
+        ul li {
+            list-style-type: none;
+            text-transform: uppercase;
+            
+        }
+
+    </style> -->
+</head>
+
+
+<body>
+    <%- include('./navbar.ejs') %>
+
+        <% if (user) { %>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <%- include('./sidebar.ejs') %>
+                    </div>
+                    <div class="col-lg-6">
+                        <%- include('./profile.ejs') %>
+                    </div>
+                </div>
+            </div>
+            <% } else {%>
+                <h1 class="mt-4 text-center py-5">Only Admin can Access Dashboard</h1>
+                <% } %>
+
+
+</body>
+
+</html>

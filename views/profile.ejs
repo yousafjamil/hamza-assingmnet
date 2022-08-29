@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- <%- include('./navbar.ejs') %>  -->
+        <!-- <%- include('./sidebar.ejs') %>  -->
+        
+        <% if (user) { %>
+            <div  class="jumbotron mt-5">
+            <h6>name <%=user.name %> </h6>  
+            <h6>email <%=user.email %> </h6>  
+            <h6>country <%=user.country %> </h6>  
+            <h6>address <%=user.address %> </span>  
+             
+            </div>
+             <% } %>
+
+
+
+        
+        <div class="col-lg-3 offset-4  mt-5 py-5 jumbotron">
+           
+        </div>
+   
+
+    </body>
+</html>
